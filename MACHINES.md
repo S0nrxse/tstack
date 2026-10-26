@@ -1,5 +1,25 @@
 # Peyton's machines
 
+## Using daFleet
+
+Our devices now keep this fork inside one daFleet checkout, at `daFleet/tstack`.
+Use daFleet's bootstrap and `~/.local/bin/fleet update` for device access and
+skill synchronization. This replaces the separate checkout and timer described
+in the standalone setup below. Do not run both sync systems on the same account.
+
+Edit skills under `daFleet/tstack/skills`. Push the changed commit to this fork,
+then commit and push the new `tstack` submodule revision in the parent daFleet
+repo. Other devices receive that pinned revision with their hourly fleet update.
+Local edits and unpublished child commits stop updates instead of being discarded.
+Each device keeps its own SSH and repository credentials outside both repos.
+
+The `dafleet` agent skill explains how to find other devices and use `fleet ssh`.
+See the parent repo's `docs/access-setup.md` and `docs/agent-setup.md` for current
+enrollment and software status. The standalone instructions below remain useful
+for machines that do not use daFleet.
+
+## Standalone installation
+
 This fork is the source for our Claude Code and Codex skills. Each machine uses
 an editable checkout at `~/src/tstack`. Both agents link to that checkout, so an
 edit takes effect locally immediately. Hourly sync fast-forwards clean `main`

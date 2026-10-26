@@ -30,8 +30,11 @@ Some skills call others. Install the ones they need too:
 
 ## Install
 
+For our devices, use the [daFleet instructions](MACHINES.md#using-dafleet) to keep
+device access and this fork together in one checkout. For a standalone copy:
+
 ```bash
-git clone https://github.com/t3dotgg/tstack
+git clone https://github.com/S0nrxse/tstack
 cp -R tstack/skills/* ~/.claude/skills/   # Claude Code
 cp -R tstack/skills/* ~/.codex/skills/    # Codex
 ```
