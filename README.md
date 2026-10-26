@@ -1,5 +1,7 @@
 # tstack
 
+Peyton's fork: [machine setup, automatic skill sync, and editing](MACHINES.md).
+
 The agent skills I use every day, cleaned up so anyone can use them. They work
 in Claude Code and Codex. Some use [T3 Code](https://github.com/pingdotgg/t3code)
 features when they are available and fall back to native tools when they are
